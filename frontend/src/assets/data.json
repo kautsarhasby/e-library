@@ -1,0 +1,64 @@
+[
+  {
+    "name": "Harry Potter Vol. 4",
+    "writer": "J.K Rowling",
+    "year": 1992,
+    "type": "Novel",
+    "sinopsis": "A mf boy with scar on his head",
+    "image": "https://images.ctfassets.net/usf1vwtuqyxm/3d9kpFpwHyjACq8H3EU6ra/85673f9e660407e5e4481b1825968043/English_Harry_Potter_4_Epub_9781781105672.jpg?w=914&q=70&fm=jpg",
+    "price": 60000,
+    "rent": 25000,
+    "read": 200
+  },
+  {
+    "name": "Jujustu Kaisen Vol. 26",
+    "writer": "Gege Akutami",
+    "year": 2018,
+    "type": "Comic/Manga",
+    "sinopsis": "A mf boy with sorcerer his inside",
+    "image": "https://preview.redd.it/volume-26-cover-hd-from-v0-ylkuv80xkmnc1.jpeg?width=640&crop=smart&auto=webp&s=942812ee626571ed8135250932ec9621e414c9b7",
+    "price": 40000,
+    "rent": 18000,
+    "read": 2900
+  },
+  {
+    "name": "The Angels Next Door Spoils Me Rotten",
+    "writer": "Mas Ama",
+    "year": 2018,
+    "sinopsis": "A mf boy got a beawutiful gurl",
+    "image": "https://upload.wikimedia.org/wikipedia/en/thumb/8/82/The_Angel_Next_Door_Spoils_Me_Rotten_volume_1_cover.jpg/220px-The_Angel_Next_Door_Spoils_Me_Rotten_volume_1_cover.jpg",
+    "price": 45000,
+    "rent": 19000,
+    "read": 1100
+  },
+  {
+    "name": "Naruto",
+    "writer": "Mas Ama",
+    "year": 2018,
+    "sinopsis": "A mf boy got a beawutiful gurl",
+    "image": "https://upload.wikimedia.org/wikipedia/id/thumb/9/94/NarutoCoverTankobon1.jpg/220px-NarutoCoverTankobon1.jpg",
+    "price": 35000,
+    "rent": 10000,
+    "read": 900
+  },
+  {
+    "name": "Darling in the FRANXX",
+    "writer": "Mas Ama",
+    "year": 2018,
+    "sinopsis": "A mf boy got a beawutiful gurl",
+    "image": "https://m.media-amazon.com/images/I/71q0nhsHAIL._AC_UF1000,1000_QL80_.jpg",
+    "price": 55000,
+    "rent": 20000,
+    "read": 1300
+  },
+  {
+    "name": "The Walking Dead",
+    "writer": "Mas Ama",
+    "year": 2018,
+    "sinopsis": "A mf boy got a beaten by zombie",
+    "image": "https://i5.walmartimages.com/asr/9ec413db-d618-4d20-ac1d-e98c79524363_1.2c8bed9b8f63c93042e749b0a61acb70.jpeg",
+    "price": 50000,
+    "rent": 15000,
+    "read": 100
+  }
+]
