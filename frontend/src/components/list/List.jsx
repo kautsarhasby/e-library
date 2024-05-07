@@ -6,7 +6,7 @@ export const List = (props) => {
   return (
     <NavLink
       {...rest}
-      className={`border-b-2 flex justify-between p-2 ${className}`}
+      className={` flex justify-between p-2 ${className} hover:bg-slate-200 transition-all rounded-md`}
     >
       {children}
     </NavLink>

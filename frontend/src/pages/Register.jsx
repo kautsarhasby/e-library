@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Input } from "../components/input/Input";
-import { Form } from "../layouts/Form";
+import InputSystem from "../components/input/Input";
 import { register } from "../services/auth.service";
+import { Form } from "../layouts/Form";
 
 export const Register = () => {
   const [isCorrect, setIsCorrect] = useState(true);
@@ -50,50 +50,58 @@ export const Register = () => {
   return (
     <main className="flex h-screen items-center justify-center bg-black/30">
       <Form onSubmit={onSubmit} title={"Register"}>
-        <Input
-          placeholder={"Input Fullname..."}
-          type={"text"}
-          name={"fullname"}
-          id={"fullname"}
-          value={form.fullname}
-          onChange={handleInputChange}
-          ref={fullnameRef}
-        >
-          Fullname :
-        </Input>
-        <Input
-          placeholder={"Input Username..."}
-          type={"text"}
-          name={"username"}
-          id={"username"}
-          value={form.username}
-          onChange={handleInputChange}
-        >
-          Username :
-        </Input>
-        <Input
-          placeholder={"Input Password..."}
-          type={"password"}
-          name={"password"}
-          id={"password"}
-          value={form.password}
-          onChange={handleInputChange}
-          password={true}
-          className="password"
-        >
-          Password :
-        </Input>
-        <Input
-          placeholder={"Confirm Your Password..."}
-          type={"password"}
-          name={"confirmpassword"}
-          id={"confirmpassword"}
-          onChange={handleInputChange}
-          password={true}
-          className="password"
-        >
-          Confirm Password :
-        </Input>
+        <InputSystem>
+          <InputSystem.Input
+            placeholder={"Input Fullname..."}
+            type={"text"}
+            name={"fullname"}
+            id={"fullname"}
+            value={form.fullname}
+            onChange={handleInputChange}
+            ref={fullnameRef}
+          >
+            Fullname :
+          </InputSystem.Input>
+        </InputSystem>
+        <InputSystem>
+          <InputSystem.Input
+            placeholder={"Input Username..."}
+            type={"text"}
+            name={"username"}
+            id={"username"}
+            value={form.username}
+            onChange={handleInputChange}
+          >
+            Username :
+          </InputSystem.Input>
+        </InputSystem>
+        <InputSystem>
+          <InputSystem.Input
+            placeholder={"Input Password..."}
+            type={"password"}
+            name={"password"}
+            id={"password"}
+            value={form.password}
+            onChange={handleInputChange}
+            password={true}
+            className="password"
+          >
+            Password :
+          </InputSystem.Input>
+        </InputSystem>
+        <InputSystem>
+          <InputSystem.Input
+            placeholder={"Confirm Your Password..."}
+            type={"password"}
+            name={"confirmpassword"}
+            id={"confirmpassword"}
+            onChange={handleInputChange}
+            password={true}
+            className="password"
+          >
+            Confirm Password :
+          </InputSystem.Input>
+        </InputSystem>
         <div className={isCorrect ? "hidden" : "block"}>
           <span className="text-red-500">
             Harap masukkan password yang benar

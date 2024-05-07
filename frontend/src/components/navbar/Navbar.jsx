@@ -1,62 +1,18 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { FaBars, FaShoppingBag, FaUserCircle } from "react-icons/fa";
+import { FaBars, FaShoppingBasket, FaUserCircle } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
-import { Button } from "../button/Button";
+import { CartList } from "../list/CartList";
 
 export const Navbar = (props) => {
   const { username, handleLogOut, isOpen, setIsOpen } = props;
   const [openProfile, setOpenProfile] = useState(false);
   const [openCart, setOpenCart] = useState(false);
 
-  const num = 5000000;
-
   return (
-    <main className="top-0 sticky ">
+    <main className="top-0 sticky shadow-lg">
       <section>
-        <main
-          className={`hidden lg:block transition-transform absolute bg-white h-screen z-20 w-2/6 
-          ${
-            openCart
-              ? "transition-all animate-sliderRight"
-              : "transition-all animate-sliderLeft -translate-x-full "
-          }
-        `}
-        >
-          <section className="flex flex-col h-full">
-            <div className="flex justify-center">
-              <span className="font-bold text-2xl">Cart</span>
-            </div>
-            <table className="w-full border-2">
-              <thead>
-                <tr>
-                  <th>Nama</th>
-                  <th>Quantity</th>
-                  <th>Harga</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Halo</td>
-                  <td>Halo</td>
-                  <td>Halo</td>
-                </tr>
-              </tbody>
-            </table>
-            <div className="font-bold border-2 text-end h-3/4">
-              Total Rp.{" "}
-              {num.toLocaleString("id-ID", {
-                styles: "currency",
-                currency: "IDR",
-              })}
-            </div>
-            <div className="justify-center flex ">
-              <button className="w-3/4 p-4 bg-green-500 hover:bg-green-800 text-white font-bold text-2xl rounded-md">
-                Checkout
-              </button>
-            </div>
-          </section>
-        </main>
+        <CartList openCart={openCart} />
         <nav className="w-full h-auto bg-white p-4 justify-around flex flex-col lg:flex-row relative">
           <section className="flex justify-between lg:flex-none items-center pb-4 lg:p-0 ">
             <NavLink to="/" className="flex items-center">
@@ -85,15 +41,19 @@ export const Navbar = (props) => {
             className="hidden items-center lg:flex"
             onClick={() => setOpenCart(!openCart)}
           >
-            <FaShoppingBag size={30} color="tomato" />
+            <FaShoppingBasket
+              size={30}
+              color="tomato"
+              className="hover:fill-red-900"
+            />
           </button>
           <div className="bg-black absolute w-1/4 top-20"></div>
           <section className="flex items-center justify-between">
             <ul className="lg:flex gap-2 items-center hidden ">
               <NavLink to="/login" className={username ? "hidden" : "block"}>
-                <Button color={"bg-red-500"} hover={"bg-red-700"}>
+                <button className="bg-black p-3  text-white rounded-md hover:bg-white hover:text-black hover:outline-black hover:outline-2 hover:outline text-lg font-medium">
                   Log in
-                </Button>
+                </button>
               </NavLink>
 
               {username && (
@@ -124,9 +84,7 @@ export const Navbar = (props) => {
                       Admin Page
                     </NavLink>
                   )}
-                  <button className="p-1" onClick={handleLogOut}>
-                    Log out
-                  </button>
+                  <button onClick={handleLogOut}>Log out</button>
                 </ul>
               </div>
             </ul>

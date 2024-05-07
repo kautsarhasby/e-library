@@ -7,7 +7,7 @@ export const HiddenList = (props) => {
   return (
     <>
       <main
-        className={`transition-all absolute w-full  bg-white ease-in-out duration-1000 ${
+        className={`transition-all absolute w-full bg-white ease-in-out duration-1000 ${
           isOpen ? "" : " -translate-y-full"
         }`}
       >
@@ -23,10 +23,7 @@ export const HiddenList = (props) => {
             </div>
           </List>
           {username == "admin" && (
-            <List
-              to="/admin"
-              className="border-b-slate-300 border-b-2 p-1 block"
-            >
+            <List to="/admin" className="p-1 block">
               Admin Page
             </List>
           )}
@@ -38,7 +35,7 @@ export const HiddenList = (props) => {
             <span>Pengaturan</span>
             <span>&rsaquo; </span>
           </List>
-          <List>
+          <List to={username ? "" : "/login"}>
             <span>Keranjang</span>
             <span>&rsaquo; </span>
           </List>

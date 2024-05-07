@@ -10,17 +10,26 @@ import { Home } from "./pages/home/Home.jsx";
 import { ErrorElement } from "./pages/404.jsx";
 import { Register } from "./pages/Register.jsx";
 import { AppAdmin } from "./pages/admin/AppAdmin.jsx";
+import { Detail } from "./pages/Detail.jsx";
+import { AppHome } from "./pages/home/AppHome.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: (
-      <>
-        <Home />
-      </>
-    ),
+    element: <AppHome />,
     errorElement: <ErrorElement />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/details/:id",
+        element: <Detail />,
+      },
+    ],
   },
+
   {
     path: "/admin",
     element: <AppAdmin />,

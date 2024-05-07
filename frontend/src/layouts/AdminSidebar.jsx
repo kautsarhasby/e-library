@@ -1,8 +1,8 @@
 import { AiFillDashboard } from "react-icons/ai";
 import { FaArrowLeft, FaGear, FaHouse, FaPen, FaUser } from "react-icons/fa6";
+import PropTypes from "prop-types";
 import { LinkSide } from "../components/admin/LinkSide";
 import { Profile } from "../components/admin/Profile";
-import PropTypes from "prop-types";
 
 export const AdminSidebar = (props) => {
   const { username, isOpen } = props;

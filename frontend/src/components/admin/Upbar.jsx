@@ -2,6 +2,7 @@ import { FaBell } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import PropTypes from "prop-types";
 import { FaBars } from "react-icons/fa";
+
 export const Upbar = (props) => {
   const { title, onClick } = props;
 

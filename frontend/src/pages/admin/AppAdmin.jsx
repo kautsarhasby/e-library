@@ -1,8 +1,8 @@
 import { Outlet, useLocation } from "react-router-dom";
-import { AdminSidebar } from "../../layouts/AdminSidebar";
-import { Upbar } from "../../components/admin/Upbar";
 import { useLoginAdmin } from "../../hooks/useLoginAdmin";
 import { useEffect, useState } from "react";
+import { AdminSidebar } from "../../layouts/AdminSidebar";
+import { Upbar } from "../../components/admin/Upbar";
 
 export const AppAdmin = () => {
   const location = useLocation();
